@@ -22,9 +22,9 @@
                             <a href="/mitra/edit/<?= $mitra['id']; ?>" class="btn btn-warning">Edit</a>
 
                             <form action="/mitra/<?= $mitra['id']; ?>" method="post" class="d-inline">
-                            <?= csrf_field(); ?>
-                            <input type="hidden" name="_method" value="DELETE">
-                            <button type="submit" class="btn btn-danger" onclick="return confirm('Apakah anda yakin ?')">Delete</button>
+                                <?= csrf_field(); ?>
+                                <input type="hidden" name="_method" value="DELETE">
+                                <button type="submit" class="btn btn-danger" onclick="return confirm('Apakah anda yakin ?')">Delete</button>
                             </form>
 
                             <br><br>
