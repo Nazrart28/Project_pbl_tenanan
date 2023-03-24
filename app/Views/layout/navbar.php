@@ -8,8 +8,8 @@
             <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                 <div class="navbar-nav">
                     <a class="nav-link active" aria-current="page" href="/">Home</a>
-                    <a class="nav-link" href="/pages/about">About</a>
-                    <a class="nav-link" href="/pages/contact">Contact</a>
+                    <a class="nav-link" href="/pages/about">Dosen</a>
+                    <a class="nav-link" href="/pages/contact">Mahasiswa</a>
                     <a class="nav-link" href="/mitra/index">Mitra</a>
                 </div>
             </div>

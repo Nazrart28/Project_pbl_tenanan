@@ -14,7 +14,7 @@
             <table class="table">
                 <thead>
                     <tr>
-                        <th scope="col">#</th>
+                        <!-- <th scope="col">#</th> -->
                         <th scope="col">Id</th>
                         <th scope="col">Mitra</th>
                         <th scope="col">Proyek</th>
@@ -27,7 +27,7 @@
                     <?php $i = 1; ?>
                     <?php foreach ($mitra as $m) : ?>
                         <tr>
-                            <th scope="row"><?= $i++; ?></th>
+                            <!-- <th scope="row"><?= $i++; ?></th> -->
                             <td><?= $m['id']; ?></td>
                             <td><?= $m['mitra']; ?></td>
                             <td><?= $m['proyek']; ?></td>
