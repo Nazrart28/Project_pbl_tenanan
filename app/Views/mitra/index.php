@@ -15,7 +15,7 @@
                 <thead>
                     <tr>
                         <!-- <th scope="col">#</th> -->
-                        <th scope="col">Id</th>
+                        <th scope="col">id</th>
                         <th scope="col">Mitra</th>
                         <th scope="col">Proyek</th>
                         <th scope="col">deskripsi</th>

@@ -30,9 +30,9 @@ class Mitra extends BaseController
         ];
 
         //jika eror
-        /*if(empty($data['mitra'])){
+        if (empty($data['mitra'])) {
             throw new \CodeIgniter\Exceptions\PageNotFoundException('Halaman tidak bisa dimuat');
-        }*/
+        }
         return view('mitra/detail', $data);
     }
 
@@ -62,7 +62,7 @@ class Mitra extends BaseController
         ])) {
             $validation = \Config\Services::validation();
 
-            return redirect()->to('/mitra/create')->withInput()->with('validation', $validation);
+            return redirect()->to('/mitra/index')->withInput()->with('validation', $validation);
         }
 
         $id = url_title($this->request->getVar('id'), '-', true);
@@ -77,14 +77,14 @@ class Mitra extends BaseController
 
         session()->setFlashdata('pesan', 'Data berhasil ditambahkan.');
 
-        return redirect()->to('/mitra/index');
+        return redirect()->to('/mitra');
     }
 
     public function delete($id)
     {
         $this->mitraModel->delete($id);
         session()->setFlashdata('pesan', 'Data berhasil dihapus.');
-        return redirect()->to('/mitra');
+        return redirect()->to('/mitra/delete');
     }
 
     public function edit($id)
