@@ -9,23 +9,23 @@ class Pages extends BaseController
         $data = [
             'title' => 'Home | PBL'
         ];
-        return view('pages/home', $data);
+        return view('dosen/home', $data);
     }
 
     public function about()
     {
         $data = [
-            'title' => 'About | PBL'
+            'title' => 'Dosen | PBL'
         ];
-        return view('pages/about', $data);
+        return view('dosen/about', $data);
     }
 
     public function contact()
     {
         $data = [
-            'title' => 'Contact | PBL'
+            'title' => 'Mahasiswa | PBL'
         ];
-        return view('pages/contact', $data);
+        return view('dosen/contact', $data);
     }
 
     /*public function mitra()

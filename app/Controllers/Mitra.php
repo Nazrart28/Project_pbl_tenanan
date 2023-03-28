@@ -15,7 +15,7 @@ class Mitra extends BaseController
     {
 
         $data = [
-            'title' => 'Mitra',
+            'title' => 'Mitra | PBL',
             'mitra' => $this->mitraModel->getMitra()
         ];
 
@@ -104,7 +104,7 @@ class Mitra extends BaseController
         $dataLama = $this->mitraModel->getMitra($this->request->getVar('id'));
         if ($dataLama['kelompok'] == $this->request->getVar('kelompok')) {
             $rule_kelompok = 'required';
-        }else {
+        } else {
             $rule_kelompok = 'required|is_unique[mitra.kelompok]';
         }
 
