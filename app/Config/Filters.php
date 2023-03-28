@@ -19,8 +19,8 @@ class Filters extends BaseConfig
         'csrf'          => CSRF::class,
         'toolbar'       => DebugToolbar::class,
         'honeypot'      => Honeypot::class,
-        'invalidchars'  => InvalidChars::class,
-        'secureheaders' => SecureHeaders::class,
+        // 'invalidchars'  => InvalidChars::class,
+        // 'secureheaders' => SecureHeaders::class,
         'login'      => \Myth\Auth\Filters\LoginFilter::class,
         'role'       => \Myth\Auth\Filters\RoleFilter::class,
         'permission' => \Myth\Auth\Filters\PermissionFilter::class,
@@ -33,7 +33,7 @@ class Filters extends BaseConfig
     public array $globals = [
         'before' => [
             'honeypot',
-            //'login'
+            'login'
             // 'csrf',
             // 'invalidchars',
         ],
@@ -65,6 +65,6 @@ class Filters extends BaseConfig
      * 'isLoggedIn' => ['before' => ['account/*', 'profiles/*']]
      */
     public array $filters = [
-        //'login' => ['before' => ['pages/about', 'pages/contact', '/mitra/index']],
+        'login' => ['before' => ['pages/about', 'pages/contact', '/mitra/index']],
     ];
 }
