@@ -33,7 +33,7 @@ $routes->set404Override();
 // route since we don't have to scan directories.
 //untuk menampilkan halaman
 $routes->get('/', 'Pages::index');
-$routes->get('/pages/home', 'Pages::index');
+//$routes->get('/pages/home', 'Pages::index');
 $routes->get('/pages/about', 'Pages::about');
 $routes->get('/pages/contact', 'Pages::contact');
 $routes->get('/mitra/index', 'Mitra::index');

@@ -65,11 +65,11 @@ class Mitra extends BaseController
             return redirect()->to('/mitra/index')->withInput()->with('validation', $validation);
         }
 
-        $id = url_title($this->request->getVar('id'), '-', true);
+        $id = url_title($this->request->getVar('mitra'), '-', true);
 
         $this->mitraModel->save([
-            'id' => $id,
             'mitra' => $this->request->getVar('mitra'),
+            'id' => $id,
             'proyek' => $this->request->getVar('proyek'),
             'deskripsi' => $this->request->getVar('deskripsi'),
             'kelompok' => $this->request->getVar('kelompok')
@@ -77,7 +77,7 @@ class Mitra extends BaseController
 
         session()->setFlashdata('pesan', 'Data berhasil ditambahkan.');
 
-        return redirect()->to('/mitra');
+        return redirect()->to('/mitra/index');
     }
 
     public function delete($id)
@@ -120,14 +120,14 @@ class Mitra extends BaseController
         ])) {
             $validation = \Config\Services::validation();
 
-            return redirect()->to('/mitra/create')->withInput()->with('validation', $validation);
+            return redirect()->to('/mitra/update')->withInput()->with('validation', $validation);
         }
 
-        $id = url_title($this->request->getVar('id'), '-', true);
+        $id = url_title($this->request->getVar('mitra'), '-', true);
 
         $this->mitraModel->save([
-            'id' => $id,
             'mitra' => $this->request->getVar('mitra'),
+            'id' => $id,
             'proyek' => $this->request->getVar('proyek'),
             'deskripsi' => $this->request->getVar('deskripsi'),
             'kelompok' => $this->request->getVar('kelompok')
@@ -135,6 +135,6 @@ class Mitra extends BaseController
 
         session()->setFlashdata('pesan', 'Data berhasil ditambahkan.');
 
-        return redirect()->to('/mitra/index');
+        return redirect()->to('/mitra/saves');
     }
 }

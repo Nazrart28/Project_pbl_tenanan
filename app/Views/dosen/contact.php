@@ -4,7 +4,7 @@
 <div class="container">
     <div class="row">
         <div class="col">
-            <h2>Contact us</h2>
+            <h2>Halaman Mahasiswa</h2>
         </div>
     </div>
 </div>
