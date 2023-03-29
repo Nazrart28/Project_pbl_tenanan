@@ -135,6 +135,6 @@ class Mitra extends BaseController
 
         session()->setFlashdata('pesan', 'Data berhasil ditambahkan.');
 
-        return redirect()->to('/mitra/saves');
+        return redirect()->to('/mitra/index');
     }
 }
