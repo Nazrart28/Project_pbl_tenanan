@@ -27,8 +27,7 @@
                     <?php $i = 1; ?>
                     <?php foreach ($mitra as $m) : ?>
                         <tr>
-                            <!-- <th scope="row"><?= $i++; ?></th> -->
-                            <td><?= $m['id']; ?></td>
+                            <th scope="id"><?= $i++; ?>
                             <td><?= $m['mitra']; ?></td>
                             <td><?= $m['proyek']; ?></td>
                             <td><?= $m['deskripsi']; ?></td>

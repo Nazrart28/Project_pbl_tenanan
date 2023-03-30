@@ -17,6 +17,7 @@ $routes->setDefaultController('Home');
 $routes->setDefaultMethod('index');
 $routes->setTranslateURIDashes(false);
 $routes->set404Override();
+$routes->setAutoRoute(true);
 // The Auto Routing (Legacy) is very dangerous. It is easy to create vulnerable apps
 // where controller filters or CSRF protection are bypassed.
 // If you don't want to define all routes, please use the Auto Routing (Improved).
@@ -42,10 +43,13 @@ $routes->get('/mitra/create', 'Mitra::create');
 $routes->get('/mitra/edit/(:segment)', 'Mitra::edit/$1');
 $routes->get('/mitra/update', 'Mitra::update');
 $routes->get('/mitra/(:any)', 'Mitra::detail/$1');
-$routes->get('/mitra/(:num)', 'Mitra::delete/$1');
+$routes->get('/mitra/delete', 'Mitra::delete/$1');
 $routes->post('/mitra/save', 'Mitra::save');
 $routes->post('/mitra/create', 'Mitra::create');
 $routes->post('/mitra/update', 'Mitra::update');
+$routes->post('/mitra/edit/(:segment)', 'Mitra::edit/$1');
+$routes->post('/mitra/update', 'Mitra::update/$1');
+$routes->post('/mitra/delete', 'Mitra::delete/$1');
 
 
 /*
