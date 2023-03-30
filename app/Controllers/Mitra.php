@@ -133,7 +133,7 @@ class Mitra extends BaseController
             'kelompok' => $this->request->getVar('kelompok')
         ]);
 
-        session()->setFlashdata('pesan', 'Data berhasil ditambahkan.');
+        session()->setFlashdata('pesan', 'Data berhasil disimpan.');
 
         return redirect()->to('/mitra/index');
     }

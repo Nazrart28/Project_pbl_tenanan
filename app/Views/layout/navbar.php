@@ -11,6 +11,7 @@
                     <a class="nav-link" href="/pages/about">Dosen</a>
                     <a class="nav-link" href="/pages/contact">Mahasiswa</a>
                     <a class="nav-link" href="/mitra/index">Mitra</a>
+                    <a class="nav-link" href="/mitra/index">Logbook</a>
                 </div>
                 <?php if (logged_in()) : ?>
                     <a class="nav-link" href="/logout">Logout</a>

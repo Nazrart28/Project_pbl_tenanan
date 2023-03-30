@@ -12,10 +12,15 @@ class MitraModel extends Model
 
     public function getMitra($id = false)
     {
-        if($id == false ){
+        // $query = $this->db->query("SELECT * FROM mitra ORDER BY mitra ASC");
+
+        // return $query->getResult();
+
+
+        if ($id == false) {
             return $this->findAll();
         }
 
-        return $this->where(['id' => $id]) -> first();
+        return $this->where(['id' => $id])->first();
     }
 }
