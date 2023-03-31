@@ -84,7 +84,7 @@ class Mitra extends BaseController
     {
         $this->mitraModel->delete($id);
         session()->setFlashdata('pesan', 'Data berhasil dihapus.');
-        return redirect()->to('/mitra/delete');
+        return redirect()->to('/mitra/index');
     }
 
     public function edit($id)

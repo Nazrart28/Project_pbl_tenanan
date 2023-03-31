@@ -46,7 +46,7 @@ $routes->get('/mitra/create', 'Mitra::save');
 $routes->get('/mitra/edit/(:segment)', 'Mitra::edit/$1');
 $routes->get('/mitra/update', 'Mitra::update');
 $routes->get('/mitra/(:any)', 'Mitra::detail/$1');
-$routes->get('/mitra/delete', 'Mitra::delete/$1');
+$routes->delete('/mitra/(:num)', 'Mitra::delete/$1');
 $routes->post('/mitra/save', 'Mitra::save');
 $routes->post('/mitra/create', 'Mitra::create');
 $routes->post('/mitra/update', 'Mitra::update');
