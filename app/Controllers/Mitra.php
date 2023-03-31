@@ -87,6 +87,9 @@ class Mitra extends BaseController
         return redirect()->to('/mitra/index');
     }
 
+
+
+
     public function edit($id)
     {
         //session();
@@ -120,11 +123,16 @@ class Mitra extends BaseController
         ])) {
             $validation = \Config\Services::validation();
 
-            return redirect()->to('/mitra/update')->withInput()->with('validation', $validation);
+            return redirect()->to('/mitra/edit' . $this->request->getVar('id'))->withInput()->with('validation', $validation);
         }
 
-        $id = url_title($this->request->getVar('mitra'), '-', true);
 
+
+
+
+
+
+        $id = url_title($this->request->getVar('mitra'), '-', true);
         $this->mitraModel->save([
             'mitra' => $this->request->getVar('mitra'),
             'id' => $id,
