@@ -39,7 +39,7 @@ $routes->get('/pages/about', 'Pages::about');
 $routes->get('/pages/contact', 'Pages::contact');
 $routes->get('/logbook/index', 'Logbook::index');
 $routes->get('/logbook/create', 'Logbook::create');
-$routes->get('/logbook/index', 'Logbook::index');
+$routes->get('/logbook/(:any)', 'Logbook::detail');
 $routes->get('/mitra/index', 'Mitra::index');
 $routes->get('/mitra/create', 'Mitra::create');
 $routes->get('/mitra/create', 'Mitra::save');
