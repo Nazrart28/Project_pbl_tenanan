@@ -52,17 +52,11 @@ class Mitra extends BaseController
     {
         //validasi
         if (!$this->validate([
-            'kelompok' => [
-                'rules' => 'required[mitra.kelompok]',
-                'errors' => [
-                    'required' => '{field} kelompok harus diisi',
-                    //'is_unique' => '{filed} kelompok sudah terdaftar'
-                ]
-            ]
+            'proyek' => 'required|is_unique[mitra.proyek]'
         ])) {
             $validation = \Config\Services::validation();
 
-            return redirect()->to('/mitra/index')->withInput()->with('validation', $validation);
+            return redirect()->to('/mitra/create')->withInput()->with('validation', $validation);
         }
 
         //$id = url_title($this->request->getVar('mitra'), '-', true);
@@ -105,7 +99,7 @@ class Mitra extends BaseController
     {
         //cek data
         $dataLama = $this->mitraModel->getMitra($this->request->getVar('id'));
-        if ($dataLama['kelompok'] == $this->request->getVar('kelompok')) {
+        if ($dataLama['mitra'] == $this->request->getVar('mitra')) {
             $rule_kelompok = 'required';
         } else {
             $rule_kelompok = 'required|is_unique[mitra.kelompok]';

@@ -13,7 +13,10 @@
                 </div>
                 <div class="mb-3">
                     <label for="proyek" class="form-label">Proyek</label>
-                    <input type="text" class="form-control" id="proyek" name="proyek" value="<?= old('proyek'); ?>">
+                    <input type="text" class="form-control" <?= ($validation->hasError('kelompok')) ? 'is-invalid' : ''; ?> id="proyek" name="proyek" value="<?= old('proyek'); ?>">
+                    <div class="invalid-feedback">
+                        Isikan proyek yang belum ada.
+                    </div>
                 </div>
                 <div class="mb-3">
                     <label for="Deskripsi" class="form-label">Deskripsi</label>
@@ -21,10 +24,7 @@
                 </div>
                 <div class="mb-3">
                     <label for="kelompok" class="form-label">Kelompok</label>
-                    <input type="text" class="form-control <?= ($validation->hasError('kelompok')) ?'is-invalid' : ''; ?>" id="kelompok" name="kelompok" value="<?= old('kelompok'); ?>">
-                    <div class="invalid-feedback">
-                        Isikan nomor kelompok dengan benar.
-                    </div>
+                    <input type="text" class="form-control" id="kelompok" name="kelompok" value="<?= old('kelompok'); ?>">
                 </div>
                 <button type="submit" class="btn btn-primary">Tambah Data</button>
             </form>
