@@ -10,12 +10,12 @@ class LogbookModel extends Model
     protected $useTimesstamps = true;
     protected $allowedFields = ['tanggal', 'kegiatan'];
 
-    public function getLogbook($id = false)
+    public function getLogbook($id_logbook = false)
     {
-        if ($id == false) {
+        if ($id_logbook == false) {
             return $this->findAll();
         }
 
-        return $this->where(['id' => $id])->first();
+        return $this->where(['id' => $id_logbook])->first();
     }
 }

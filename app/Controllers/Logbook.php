@@ -58,17 +58,25 @@ class Logbook extends BaseController
         return redirect()->to('/logbook/index');
     }
 
-    public function detail($id)
+    public function detail($id_logbook)
     {
         $data = [
+            'id' => $id_logbook,
             'title' => 'Detail Logbook',
-            'logbook' => $this->logbookModel->getLogbook($id)
+            'logbook' => $this->logbookModel->getLogbook($id_logbook)
         ];
 
         //jika eror
-        /*if(empty($data['mitra'])){
+        if (empty($data['logbook'])) {
             throw new \CodeIgniter\Exceptions\PageNotFoundException('Halaman tidak bisa dimuat');
-        }*/
+        }
         return view('logbook/detail', $data);
     }
+
+    // public function delete($id)
+    // {
+    //     $this->logbookModel->delete($id);
+    //     session()->setFlashdata('pesan', 'Data berhasil dihapus.');
+    //     return redirect()->to('/logbook/index');
+    // }
 }

@@ -14,9 +14,9 @@
                     <a class="nav-link" href="/logbook/index">Logbook</a>
                 </div>
                 <?php if (logged_in()) : ?>
-                    <a class="nav-link" href="/logout">Logout</a>
+                    <a class="btn btn-outline-danger" href="/logout">Logout</a>
                 <?php else : ?>
-                    <a class="nav-link" href="/login">Login</a>
+                    <a class="btn btn-outline-primary" href="/login">Login</a>
                 <?php endif; ?>
             </div>
         </div>

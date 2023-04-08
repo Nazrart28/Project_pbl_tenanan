@@ -14,8 +14,8 @@
                     -->
                     <div class="col-md-8">
                         <div class="card-body">
-                            <p class="card-text"><b>Tanggal :</b> <?= $tanggal['tanggal']; ?></p>
-                            <p class="card-text"><b>Kegiatan :</b> <?= $kegiatan['kegiatan']; ?></p>
+                            <p class="card-text"><b>Tanggal :</b> <?= $logbook['tanggal']; ?></p>
+                            <p class="card-text"><b>Kegiatan :</b> <?= $logbook['kegiatan']; ?></p>
 
                             <br><br>
                             <a href="/logbook/index">back</a>

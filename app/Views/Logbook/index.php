@@ -5,11 +5,11 @@
     <div class="row">
         <div class="col">
             <h1 class="mt-2">Logbook</h1>
-            <a href="/logbook/create" class="btn btn-primary mb-3">Logbook</a>
+            <a href="/logbook/create" class="btn btn-primary mb-3">Tambah Data</a>
             <table class="table">
                 <thead>
                     <tr>
-                        <th scope="col">#</th>
+                        <th scope="col">id</th>
                         <th scope="col">Tanggal</th>
                         <th scope="col">Kegiatan</th>
                     </tr>
@@ -23,7 +23,7 @@
                             <td><?= $l['kegiatan']; ?></td>
                         </tr>
                         <td>
-                            <a href="/logbook/<?= $l['tanggal']; ?>" class="btn btn-success">Lihat</a>
+                            <a href="/logbook/<?= $l['id logbook']; ?>" class="btn btn-success">Detail</a>
                         </td>
                     <?php endforeach; ?>
                 </tbody>
