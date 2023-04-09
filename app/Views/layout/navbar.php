@@ -11,6 +11,7 @@
                     <a class="nav-link" href="/pages/about">About</a>
                     <a class="nav-link" href="/pages/contact">Contact</a>
                     <a class="nav-link" href="/mitra/index">Mitra</a>
+                    <a class="nav-link" href="/kelompok/index">kelompok</a>
                 </div>
             </div>
         </div>
