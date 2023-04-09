@@ -36,14 +36,34 @@ $routes->get('/', 'Pages::index');
 $routes->get('/pages/home', 'Pages::index');
 $routes->get('/pages/about', 'Pages::about');
 $routes->get('/pages/contact', 'Pages::contact');
-$routes->get('/mitra/index', 'Mitra::index');
+/*$routes->get('/mitra/index', 'Mitra::index');
 $routes->get('/mitra/create', 'Mitra::create');
-//$routes->get('/mitra/create', 'Mitra::save');
+$routes->get('/mitra/create', 'Mitra::save');
 $routes->get('/mitra/edit/(:segment)', 'Mitra::edit/$1');
-//$routes->get('/mitra/update', 'Mitra::update');
+$routes->get('/mitra/update', 'Mitra::update');
 $routes->get('/mitra/(:any)', 'Mitra::detail/$1');
-$routes->get('/mitra/(:num)', 'Mitra::delete/$1');
-
+$routes->delete('/mitra/(:num)', 'Mitra::delete/$1');
+$routes->post('/mitra/save', 'Mitra::save');
+$routes->post('/mitra/create', 'Mitra::create');
+$routes->post('/mitra/update', 'Mitra::update');
+$routes->post('/mitra/edit/(:segment)', 'Mitra::edit/$1');
+$routes->post('/mitra/(:any)', 'Mitra::update/$1');
+$routes->post('/mitra/delete', 'Mitra::delete/$1');*/
+$routes->get('/kelompok/index', 'kelompok::index');
+$routes->get('/kelompok/create', 'kelompok::create');
+$routes->post('/kelompok/save/(any)', 'kelompok::save');
+$routes->get('/kelompok/(:any)', 'kelompok::detail/$1');
+$routes->get('/kelompok/(:any)', 'kelompok::detail/$1');
+$routes->get('/kelompok/(:any)', 'kelompok::edit/$1');
+$routes->post('/kelompok/update/(:segment)', 'kelompok::update/$1');
+$routes->post('/kelompok/edit/(:segment)', 'kelompok::edit/$1');
+$routes->post('/kelompok/(:any)', 'kelompok::save/$1');
+$routes->get('/kelompok/update/(:segment)', 'kelompok::update/$1');
+$routes->post('/kelompok/(:any)', 'kelompok::update/$1');
+$routes->get('/kelompok/(:any)', 'kelompok::detail/$1');
+$routes->get('/kelompok/(:any)', 'kelompok::detail/$1');
+$routes->post('/kelompok/edit/(:segment)', 'kelompok::edit/$1');
+$routes->delete('/kelompok/(:num)', 'kelompok::delete/$1');
 
 /*
  * --------------------------------------------------------------------
