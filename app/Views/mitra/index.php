@@ -1,4 +1,4 @@
-<?= $this->extend('layout/template'); ?>
+<?= $this->extend('layout/dashboard-layout'); ?>
 
 <?= $this->section('content'); ?>
 <div class="container">
@@ -15,7 +15,7 @@
                 <thead>
                     <tr>
                         <!-- <th scope="col">#</th> -->
-                        <th scope="col">id</th>
+                        <th scope="col">No</th>
                         <th scope="col">Mitra</th>
                         <th scope="col">Proyek</th>
                         <th scope="col">deskripsi</th>

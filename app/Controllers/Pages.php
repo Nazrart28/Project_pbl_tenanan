@@ -19,20 +19,4 @@ class Pages extends BaseController
         ];
         return view('dosen/about', $data);
     }
-
-    public function contact()
-    {
-        $data = [
-            'title' => 'Mahasiswa | PBL'
-        ];
-        return view('dosen/contact', $data);
-    }
-
-    /*public function mitra()
-    {
-        $data = [
-            'title' => 'Mitra | PBL'
-        ];
-        return view('pages/mitra', $data);
-    }*/
 }

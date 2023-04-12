@@ -52,7 +52,7 @@ class Mitra extends BaseController
     {
         //validasi
         if (!$this->validate([
-            'proyek' => 'required|is_unique[mitra.proyek]'
+            'proyek' => 'required|is_unique[mitra.proyek]',
         ])) {
             $validation = \Config\Services::validation();
 
@@ -121,11 +121,6 @@ class Mitra extends BaseController
         }
 
 
-
-
-
-
-
         $id = url_title($this->request->getVar('mitra'), '-', true);
         $this->mitraModel->save([
             'mitra' => $this->request->getVar('mitra'),
@@ -135,7 +130,7 @@ class Mitra extends BaseController
             'kelompok' => $this->request->getVar('kelompok')
         ]);
 
-        session()->setFlashdata('pesan', 'Data berhasil disimpan.');
+        session()->setFlashdata('pesan', 'Data berhasil diubah.');
 
         return redirect()->to('/mitra/index');
     }

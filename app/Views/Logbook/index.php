@@ -1,4 +1,4 @@
-<?= $this->extend('layout/template'); ?>
+<?= $this->extend('layout/dashboard-layout'); ?>
 
 <?= $this->section('content'); ?>
 <div class="container">
@@ -9,7 +9,7 @@
             <table class="table">
                 <thead>
                     <tr>
-                        <th scope="col">id</th>
+                        <th scope="col">No</th>
                         <th scope="col">Tanggal</th>
                         <th scope="col">Kegiatan</th>
                     </tr>
@@ -23,7 +23,7 @@
                             <td><?= $l['kegiatan']; ?></td>
                         </tr>
                         <td>
-                            <a href="/logbook/<?= $l['id logbook']; ?>" class="btn btn-success">Detail</a>
+                            <a href="/logbook/<?= $l['id_logbook']; ?>" class="btn btn-success">Detail</a>
                         </td>
                     <?php endforeach; ?>
                 </tbody>

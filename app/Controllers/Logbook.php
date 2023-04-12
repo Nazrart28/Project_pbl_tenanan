@@ -14,7 +14,7 @@ class Logbook extends BaseController
     public function index()
     {
         $data = [
-            'title' => 'Logbook',
+            'title' => 'Logbook | PBL',
             'logbook' => $this->logbookModel->getlogbook()
         ];
 
@@ -65,6 +65,8 @@ class Logbook extends BaseController
             'title' => 'Detail Logbook',
             'logbook' => $this->logbookModel->getLogbook($id_logbook)
         ];
+
+        session()->setFlashdata('pesan', 'Data berhasil diubah');
 
         //jika eror
         if (empty($data['logbook'])) {

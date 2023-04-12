@@ -1,4 +1,4 @@
-<?= $this->extend('layout/template'); ?>
+<?= $this->extend('layout/dashboard-layout'); ?>
 
 <?= $this->section('content'); ?>
 <div class="container">
@@ -16,6 +16,15 @@
                         <div class="card-body">
                             <p class="card-text"><b>Tanggal :</b> <?= $logbook['tanggal']; ?></p>
                             <p class="card-text"><b>Kegiatan :</b> <?= $logbook['kegiatan']; ?></p>
+
+                            <a href="/logbook/edit/<?= $logbook['id_logbook']; ?>" class="btn btn-warning">Edit</a>
+
+                            <form action="/logbook/<?= $logbook['id_logbook']; ?>" method="post" class="d-inline">
+                                <?= csrf_field(); ?>
+                                <input type="hidden" name="_method" value="DELETE">
+                                <button type="submit" class="btn btn-danger" onclick="return confirm('Apakah anda yakin ?')">Delete</button>
+                            </form>
+
 
                             <br><br>
                             <a href="/logbook/index">back</a>

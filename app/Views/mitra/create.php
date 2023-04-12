@@ -1,4 +1,4 @@
-<?= $this->extend('layout/template'); ?>
+<?= $this->extend('layout/dashboard-layout'); ?>
 
 <?= $this->section('content'); ?>
 <div class="container">
@@ -13,14 +13,17 @@
                 </div>
                 <div class="mb-3">
                     <label for="proyek" class="form-label">Proyek</label>
-                    <input type="text" class="form-control" <?= ($validation->hasError('kelompok')) ? 'is-invalid' : ''; ?> id="proyek" name="proyek" value="<?= old('proyek'); ?>">
+                    <input type="text" class="form-control" <?= ($validation->hasError('proyek')) ? 'is-invalid' : ''; ?> id="proyek" name="proyek" value="<?= old('proyek'); ?>">
                     <div class="invalid-feedback">
                         Isikan proyek yang belum ada.
                     </div>
                 </div>
                 <div class="mb-3">
                     <label for="Deskripsi" class="form-label">Deskripsi</label>
-                    <textarea class="form-control" id="deskripsi" name="deskripsi" value="<?= old('deskripsi'); ?>" rows="3"></textarea>
+                    <textarea class="form-control" <?= ($validation->hasError('deskripsi')) ? 'is-invalid' : ''; ?> id="deskripsi" name="deskripsi" value="<?= old('deskripsi'); ?>" rows="3"></textarea>
+                    <div class="invalid-feedback">
+                        Isikan Deskripsi yang belum ada.
+                    </div>
                 </div>
                 <div class="mb-3">
                     <label for="kelompok" class="form-label">Kelompok</label>

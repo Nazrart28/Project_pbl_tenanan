@@ -9,7 +9,7 @@
                 <div class="navbar-nav">
                     <a class="nav-link active" aria-current="page" href="/">Home</a>
                     <a class="nav-link" href="/pages/about">Dosen</a>
-                    <a class="nav-link" href="/pages/contact">Mahasiswa</a>
+                    <a class="nav-link" href="/kelompok/index">Kelompok</a>
                     <a class="nav-link" href="/mitra/index">Mitra</a>
                     <a class="nav-link" href="/logbook/index">Logbook</a>
                 </div>
