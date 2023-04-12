@@ -1,4 +1,4 @@
-<?= $this->extend('layout/template'); ?>
+<?= $this->extend('layout/dashboard-layout'); ?>
 
 <?= $this->section('content'); ?>
 <div class="container">
@@ -9,14 +9,14 @@
                 <?= csrf_field(); ?>
                 <div class="mb-3">
                     <label for="nama" class="form-label">nama</label>
-                    <input type="text" class="form-control"<?= ($validation->hasError('nama')) ? 'is-invalid' : ''; ?> id="nama" name="nama" value="<?= old('nama'); ?>">
+                    <input type="text" class="form-control" <?= ($validation->hasError('nama')) ? 'is-invalid' : ''; ?> id="nama" name="nama" value="<?= old('nama'); ?>">
                     <div class="invalid-feedback">
                         Isikan kelompok dengan benar.
                     </div>
                 </div>
                 <div class="mb-3">
                     <label for="nim" class="form-label">nim</label>
-                    <input type="text" class="form-control"<?= ($validation->hasError('nim')) ? 'is-invalid' : ''; ?> id="nim" name="nim" value="<?= old('nim'); ?>">
+                    <input type="text" class="form-control" <?= ($validation->hasError('nim')) ? 'is-invalid' : ''; ?> id="nim" name="nim" value="<?= old('nim'); ?>">
                     <div class="invalid-feedback">
                         Isikan kelompok dengan benar.
                     </div>
