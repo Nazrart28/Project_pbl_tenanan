@@ -98,7 +98,9 @@ $routes->delete('/kelompok/(:num)', 'kelompok::delete/$1');
 $routes->post('/kelompok/create', 'kelompok::create');
 $routes->post('/kelompok/update', 'kelompok::update');
 $routes->post('/kelompok/update', 'kelompok::update/$1');
-
+$routes->get('/Berkas', 'Berkas::create');
+$routes->get('/Berkas/save', 'Berkas::save');
+$routes->get('/Berkas/index', 'Berkas::index');
 
 /*
  * --------------------------------------------------------------------

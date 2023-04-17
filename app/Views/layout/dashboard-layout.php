@@ -13,7 +13,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title><?= (isset($pageTitle)) ? $pageTitle : 'PBL' ?></title>
+    <title><?= (isset($pageTitle)) ? $pageTitle : 'Aplikasi PBL' ?></title>
     <base href="/">
 
     <!-- Google Font: Source Sans Pro -->
@@ -136,7 +136,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
                with font-awesome or any other icon font library -->
 
                         <li class="nav-item">
-                            <a href="<?= route_to('user.home'); ?>" class="nav-link">
+                            <a class="nav-link" href="/">
                                 <i class="nav-icon fas fa-home"></i>
                                 <p>
                                     Home
@@ -176,7 +176,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="<?= route_to('user.submit_file'); ?>" class="nav-link">
+                            <a class="nav-link" href="/Berkas/create">
                                 <i class="nav-icon fas fa-upload"></i>
                                 <p>
                                     Submit File
@@ -205,12 +205,12 @@ scratch. This page gets rid of all links and provides the needed markup only.
                 <div class="container-fluid">
                     <div class="row mb-2">
                         <div class="col-sm-6">
-                            <h1 class="m-0"><?= (isset($pageTitle)) ? $pageTitle : 'PBL'; ?></h1>
+                            <h1 class="m-0"><?= (isset($pageTitle)) ? $pageTitle : 'Aplikasi PBL'; ?></h1>
                         </div><!-- /.col -->
                         <div class="col-sm-6">
                             <ol class="breadcrumb float-sm-right">
                                 <li class="breadcrumb-item"><a href="<?= route_to('user.home'); ?>">Home</a></li>
-                                <li class="breadcrumb-item active"><?= (isset($pageTitle)) ? $pageTitle : 'PBL'; ?></li>
+                                <li class="breadcrumb-item active"><?= (isset($pageTitle)) ? $pageTitle : 'Aplikasi PBL'; ?></li>
                             </ol>
                         </div><!-- /.col -->
                     </div><!-- /.row -->
