@@ -17,15 +17,8 @@
                             <p class="card-text"><b>Tanggal :</b> <?= $logbook['tanggal']; ?></p>
                             <p class="card-text"><b>Kegiatan :</b> <?= $logbook['kegiatan']; ?></p>
 
-                            <a href="/logbook/edit/<?= $logbook['id_logbook']; ?>" class="btn btn-warning">Edit</a>
-
-                            <form action="/logbook/<?= $logbook['id_logbook']; ?>" method="post" class="d-inline">
-                                <?= csrf_field(); ?>
-                                <input type="hidden" name="_method" value="DELETE">
-                                <button type="submit" class="btn btn-danger" onclick="return confirm('Apakah anda yakin ?')">Delete</button>
-                            </form>
-
-
+                            <a href="/logbook/edit/<?= $logbook['id']; ?>" class="btn btn-success">Yes</a>
+                            <a href="/logbook/edit/<?= $logbook['id']; ?>" class="btn btn-danger">No</a>
                             <br><br>
                             <a href="/logbook/index">back</a>
 

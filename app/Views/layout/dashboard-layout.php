@@ -101,8 +101,9 @@ scratch. This page gets rid of all links and provides the needed markup only.
         <aside class="main-sidebar sidebar-dark-primary elevation-4">
             <!-- Brand Logo -->
             <a href="index3.html" class="brand-link">
-                <img src="dist/img/AdminLTELogo.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
-                <span class="brand-text font-weight-light">Sistem PBL D3 TI</span>
+                <span class="brand-text font-weight-light">
+                    <h3>Sistem PBL D3 TI</h3>
+                </span>
             </a>
 
             <!-- Sidebar -->
@@ -136,7 +137,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
                with font-awesome or any other icon font library -->
 
                         <li class="nav-item">
-                            <a class="nav-link" href="/">
+                            <a class="nav-link" href="/main/index">
                                 <i class="nav-icon fas fa-home"></i>
                                 <p>
                                     Home
@@ -168,7 +169,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="<?= route_to('user.ganttchart'); ?>" class="nav-link">
+                            <a class="nav-link" href="/ganttchart/ganttchart">
                                 <i class="nav-icon fas fa-book"></i>
                                 <p>
                                     Ganttchart
@@ -176,7 +177,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="/Berkas/create">
+                            <a class="nav-link" href="/submit_file/index">
                                 <i class="nav-icon fas fa-upload"></i>
                                 <p>
                                     Submit File
@@ -193,9 +194,11 @@ scratch. This page gets rid of all links and provides the needed markup only.
                         </li>
                     </ul>
                 </nav>
-                <!-- /.sidebar-menu -->
             </div>
             <!-- /.sidebar -->
+            <div style="display:flex; justify-content:center; align-items:center; height: 150px;">
+                <img src="dist/img/UNS.png" alt="Gambar" style="width:45%;height:auto;">
+            </div>
         </aside>
 
         <!-- Content Wrapper. Contains page content -->
@@ -205,7 +208,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
                 <div class="container-fluid">
                     <div class="row mb-2">
                         <div class="col-sm-6">
-                            <h1 class="m-0"><?= (isset($pageTitle)) ? $pageTitle : 'Aplikasi PBL'; ?></h1>
+                            <h1 class="m-0"><?= (isset($pageTitle)) ? $pageTitle : ''; ?></h1>
                         </div><!-- /.col -->
                         <div class="col-sm-6">
                             <ol class="breadcrumb float-sm-right">

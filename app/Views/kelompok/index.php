@@ -15,10 +15,10 @@
                 <thead>
                     <tr>
                         <th scope="col">No</th>
-                        <th scope="col">nama</th>
-                        <th scope="col">nim</th>
-                        <th scope="col">kelas</th>
-                        <th scope="col">kelompok</th>
+                        <th scope="col">Nama</th>
+                        <th scope="col">NIM</th>
+                        <th scope="col">Kelas</th>
+                        <th scope="col">Kelompok</th>
 
                     </tr>
                 </thead>

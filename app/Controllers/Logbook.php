@@ -58,12 +58,12 @@ class Logbook extends BaseController
         return redirect()->to('/logbook/index');
     }
 
-    public function detail($id_logbook)
+    public function detail($id)
     {
         $data = [
-            'id' => $id_logbook,
+            'id' => $id,
             'title' => 'Detail Logbook',
-            'logbook' => $this->logbookModel->getLogbook($id_logbook)
+            'logbook' => $this->logbookModel->getLogbook($id)
         ];
 
         session()->setFlashdata('pesan', 'Data berhasil diubah');
@@ -75,10 +75,10 @@ class Logbook extends BaseController
         return view('logbook/detail', $data);
     }
 
-    // public function delete($id)
-    // {
-    //     $this->logbookModel->delete($id);
-    //     session()->setFlashdata('pesan', 'Data berhasil dihapus.');
-    //     return redirect()->to('/logbook/index');
-    // }
+    public function delete($id)
+    {
+        $this->logbookModel->delete($id);
+        session()->setFlashdata('pesan', 'Data berhasil dihapus.');
+        return redirect()->to('/logbook/index');
+    }
 }

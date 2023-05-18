@@ -5,9 +5,9 @@
     <div class="row">
         <div class="col-8">
             <h2>Form Ubah Data</h2>
-            <form action="/logbook/update/<?= $logbook['id_logbook']; ?>" method="post">
+            <form action="/logbook/update/<?= $logbook['id']; ?>" method="post">
                 <?= csrf_field(); ?>
-                <input type="hidden" name="id logbook" value="<?= $logbook['id_logbook']; ?>">
+                <input type="hidden" name="id" value="<?= $logbook['id']; ?>">
                 <div class="mb-3">
                     <label for="tanggal" class="form-label">Tanggal</label>
                     <input type="date" class="form-control" id="tanggal" name="tanggal" value="<?= (old('tanggal')) ? old('tanggal') : $logbook['tanggal'] ?>">

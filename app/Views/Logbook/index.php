@@ -16,15 +16,22 @@
                 </thead>
                 <tbody>
                     <?php $i = 1; ?>
-                    <?php foreach ($logbook as $l) : ?>
+                    <?php foreach ($logbook as $LB) : ?>
                         <tr>
                             <th scope="id"><?= $i++; ?></th>
-                            <td><?= $l['tanggal']; ?></td>
-                            <td><?= $l['kegiatan']; ?></td>
+                            <td><?= $LB['tanggal']; ?></td>
+                            <td><?= $LB['kegiatan']; ?></td>
+                            <td>
+                                <a href="/logbook/<?= $LB['id']; ?>" class="btn btn-success">Verified ?</a>
+
+                                <form action="/logbook/<?= $LB['id']; ?>" method="post" class="d-inline">
+                                    <?= csrf_field(); ?>
+                                    <input type="hidden" name="_method" value="DELETE">
+                                    <button type="submit" class="btn btn-danger" onclick="return confirm('Apakah anda yakin ?')">Delete</button>
+                                </form>
+                            </td>
                         </tr>
-                        <td>
-                            <a href="/logbook/<?= $l['id_logbook']; ?>" class="btn btn-success">Detail</a>
-                        </td>
+
                     <?php endforeach; ?>
                 </tbody>
             </table>

@@ -33,13 +33,28 @@ $routes->setAutoRoute(true);
 // We get a performance increase by specifying the default
 // route since we don't have to scan directories.
 //untuk menampilkan halaman
-$routes->get('/', 'Pages::index');
+$routes->get('/', 'Main::index');
+$routes->get('/main/index', 'Main::index');
+$routes->get('/main/index', 'Main::index');
+$routes->get('/submit_file/index', 'SubmitFileController::index');
+$routes->get('/submit_file/create', 'SubmitFileController::create');
+$routes->post('/submit_file/save', 'SubmitFileController::save');
+// $routes->post('/submit_file/delete', 'SubmitFileController::delete/$1');
+$routes->delete('/submit_file/(:num)', 'SubmitFileController::delete/$1');
+$routes->get('/ganttchart/ganttchart', 'GanttChartController::ganttchart');
 $routes->get('/logbook/index', 'Logbook::index');
 $routes->get('/logbook/index', 'Logbook::index');
 $routes->get('/logbook/create', 'Logbook::create');
-$routes->get('/logbook/detail', 'Logbook::detail');
 //$routes->patch('/logbook/detail', 'Logbook::detail');
 //$routes->get('/logbook/(:any)', 'Logbook::detail/$1');
+$routes->group("user", function ($routes) {
+    $routes->get('home', 'UserController::index', ['as' => 'user.home']);
+    $routes->get('kelompok', 'UserController::kelompok', ['as' => 'user.kelompok']);
+    $routes->get('mitra', 'UserController::mitra', ['as' => 'user.mitra']);
+    $routes->get('logbook', 'UserController::logbook', ['as' => 'user.logbook']);
+    $routes->get('ganttchart', 'UserController::ganttchart', ['as' => 'user.ganttchart']);
+    $routes->get('submit_file', 'UserController::submit_file', ['as' => 'user.submit_file']);
+});
 $routes->get('/mitra/index', 'Mitra::index');
 $routes->get('/mitra/create', 'Mitra::create');
 $routes->get('/mitra/create', 'Mitra::save');
@@ -48,10 +63,11 @@ $routes->get('/mitra/edit/(:segment)', 'Mitra::edit/$1');
 $routes->get('/mitra/update', 'Mitra::update/$1');
 $routes->get('/mitra/(:any)', 'Mitra::detail/$1');
 $routes->delete('/mitra/(:num)', 'Mitra::delete/$1');
-//$routes->delete('/logbook/(:num)', 'Logbook::delete/$1');
+$routes->delete('/logbook/(:num)', 'Logbook::delete/$1');
+$routes->get('/logbook/(:num)', 'Logbook::detail/$1');
+$routes->get('/logbook/edit/(:segment)', 'logbook::edit/$1');
 $routes->post('/logbook/index', 'Logbook::index');
 $routes->post('/logbook/create', 'Logbook::create');
-$routes->post('/logbook/detail', 'Logbook::detail');
 $routes->post('/mitra/save', 'Mitra::save');
 $routes->post('/mitra/create', 'Mitra::create');
 $routes->post('/mitra/edit/(:segment)', 'Mitra::edit/$1');
