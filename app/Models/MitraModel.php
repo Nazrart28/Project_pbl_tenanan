@@ -8,7 +8,7 @@ class MitraModel extends Model
 {
     protected $table = 'mitra';
     protected $useTimesstamps = true;
-    protected $allowedFields = ['mitra', 'proyek', 'deskripsi', 'kelompok'];
+    protected $allowedFields = ['mitra', 'proyek', 'deskripsi', 'deskripsi_mitra', 'kelompok'];
 
     public function getMitra($id = false)
     {

@@ -22,7 +22,7 @@
                             <td><?= $LB['tanggal']; ?></td>
                             <td><?= $LB['kegiatan']; ?></td>
                             <td>
-                                <a href="/logbook/<?= $LB['id']; ?>" class="btn btn-success">Verified ?</a>
+                                <!-- <a href="/logbook/<?= $LB['id']; ?>" class="btn btn-success">Verifikasi</a> -->
 
                                 <form action="/logbook/<?= $LB['id']; ?>" method="post" class="d-inline">
                                     <?= csrf_field(); ?>

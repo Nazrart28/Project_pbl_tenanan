@@ -66,6 +66,7 @@ class Mitra extends BaseController
             //'id' => $id,
             'proyek' => $this->request->getVar('proyek'),
             'deskripsi' => $this->request->getVar('deskripsi'),
+            'deskripsi_mitra' => $this->request->getVar('deskripsi_mitra'),
             'kelompok' => $this->request->getVar('kelompok')
         ]);
 

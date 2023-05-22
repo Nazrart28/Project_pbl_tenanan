@@ -18,7 +18,6 @@
                         <th scope="col">No</th>
                         <th scope="col">Mitra</th>
                         <th scope="col">Proyek</th>
-                        <th scope="col">deskripsi</th>
                         <th scope="col">kelompok</th>
                         <th scope="col">Detail</th>
                     </tr>
@@ -30,7 +29,6 @@
                             <th scope="id"><?= $i++; ?>
                             <td><?= $m['mitra']; ?></td>
                             <td><?= $m['proyek']; ?></td>
-                            <td><?= $m['deskripsi']; ?></td>
                             <td><?= $m['kelompok']; ?></td>
                             <td>
                                 <a href="/mitra/<?= $m['id']; ?>" class="btn btn-success">Detail</a>

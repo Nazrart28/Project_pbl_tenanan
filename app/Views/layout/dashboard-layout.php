@@ -114,7 +114,15 @@ scratch. This page gets rid of all links and provides the needed markup only.
                         <img src="dist/img/user2-160x160.jpg" class="img-circle elevation-2" alt="User Image">
                     </div>
                     <div class="info">
-                        <a href="#" class="d-block">Nama Mahasiswa</a>
+                        <?php if (has_permission('dosen')) : ?>
+                            <a href="#" class="d-block">Dosen</a>
+                        <?php elseif (has_permission('mahasiswa')) : ?>
+                            <a href="#" class="d-block">Mahasiswa</a>
+                        <?php elseif (has_permission('mitra')) : ?>
+                            <a href="#" class="d-block">Mitra</a>
+                        <?php else : ?>
+                            <a href="#" class="d-block"> </a>
+                        <?php endif; ?>
                     </div>
                 </div>
 
@@ -135,55 +143,124 @@ scratch. This page gets rid of all links and provides the needed markup only.
                     <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
                         <!-- Add icons to the links using the .nav-icon class
                with font-awesome or any other icon font library -->
-
-                        <li class="nav-item">
-                            <a class="nav-link" href="/main/index">
-                                <i class="nav-icon fas fa-home"></i>
-                                <p>
-                                    Home
-                                </p>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="/kelompok/index">
-                                <i class="nav-icon fas fa-users"></i>
-                                <p>
-                                    Kelompok Mahasiswa
-                                </p>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="/mitra/index">
-                                <i class="nav-icon fas fa-building"></i>
-                                <p>
-                                    Mitra dan Proyek
-                                </p>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="/logbook/index">
-                                <i class="nav-icon fas fa-pen"></i>
-                                <p>
-                                    Logbook
-                                </p>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="/ganttchart/ganttchart">
-                                <i class="nav-icon fas fa-book"></i>
-                                <p>
-                                    Ganttchart
-                                </p>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="/submit_file/index">
-                                <i class="nav-icon fas fa-upload"></i>
-                                <p>
-                                    Submit File
-                                </p>
-                            </a>
-                        </li>
+                        <?php if (has_permission('dosen')) : ?>
+                            <li class="nav-item">
+                                <a class="nav-link" href="/main/index">
+                                    <i class="nav-icon fas fa-home"></i>
+                                    <p>
+                                        Home
+                                    </p>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="/kelompok/index">
+                                    <i class="nav-icon fas fa-users"></i>
+                                    <p>
+                                        Kelompok Mahasiswa
+                                    </p>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="/mitra/index">
+                                    <i class="nav-icon fas fa-building"></i>
+                                    <p>
+                                        Mitra dan Proyek
+                                    </p>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="/logbook/index">
+                                    <i class="nav-icon fas fa-pen"></i>
+                                    <p>
+                                        Logbook
+                                    </p>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="/ganttchart/ganttchart">
+                                    <i class="nav-icon fas fa-book"></i>
+                                    <p>
+                                        Ganttchart
+                                    </p>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="/submit_file/index">
+                                    <i class="nav-icon fas fa-upload"></i>
+                                    <p>
+                                        Submit File
+                                    </p>
+                                </a>
+                            </li>
+                        <?php elseif (has_permission('mahasiswa')) : ?>
+                            <li class="nav-item">
+                                <a class="nav-link" href="/main/index">
+                                    <i class="nav-icon fas fa-home"></i>
+                                    <p>
+                                        Home
+                                    </p>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                            <li class="nav-item">
+                                <a class="nav-link" href="/logbook/index">
+                                    <i class="nav-icon fas fa-pen"></i>
+                                    <p>
+                                        Logbook
+                                    </p>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="/ganttchart/ganttchart">
+                                    <i class="nav-icon fas fa-book"></i>
+                                    <p>
+                                        Ganttchart
+                                    </p>
+                                </a>
+                            </li>
+                        <?php elseif (in_groups('mitra')) : ?>
+                            <li class="nav-item">
+                                <a class="nav-link" href="/main/index">
+                                    <i class="nav-icon fas fa-home"></i>
+                                    <p>
+                                        Home
+                                    </p>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="/kelompok/index">
+                                    <i class="nav-icon fas fa-users"></i>
+                                    <p>
+                                        Kelompok Mahasiswa
+                                    </p>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="/ganttchart/ganttchart">
+                                    <i class="nav-icon fas fa-book"></i>
+                                    <p>
+                                        Ganttchart
+                                    </p>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="/submit_file/index">
+                                    <i class="nav-icon fas fa-upload"></i>
+                                    <p>
+                                        Submit File
+                                    </p>
+                                </a>
+                            </li>
+                        <?php else : ?>
+                            <li class="nav-item">
+                                <a class="nav-link" href="/main/index">
+                                    <i class="nav-icon fas fa-home"></i>
+                                    <p>
+                                        Home
+                                    </p>
+                                </a>
+                            </li>
+                        <?php endif; ?>
                         <li class="nav-item">
                             <?php if (logged_in()) : ?>
                                 <a class="btn btn-outline-danger" href="/logout">Logout</a>

@@ -81,7 +81,6 @@ $routes->get('/kelompok/create', 'kelompok::create');
 $routes->post('/kelompok/save/(any)', 'kelompok::save');
 $routes->get('/kelompok/(:any)', 'kelompok::detail/$1');
 $routes->get('/kelompok/(:any)', 'kelompok::detail/$1');
-$routes->get('/kelompok/(:any)', 'kelompok::edit/$1');
 $routes->post('/kelompok/update/(:segment)', 'kelompok::update/$1');
 $routes->post('/kelompok/edit/(:segment)', 'kelompok::edit/$1');
 $routes->post('/kelompok/(:any)', 'kelompok::save/$1');

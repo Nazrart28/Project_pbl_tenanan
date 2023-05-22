@@ -17,8 +17,8 @@
                             <p class="card-text"><b>Tanggal :</b> <?= $logbook['tanggal']; ?></p>
                             <p class="card-text"><b>Kegiatan :</b> <?= $logbook['kegiatan']; ?></p>
 
-                            <a href="/logbook/edit/<?= $logbook['id']; ?>" class="btn btn-success">Yes</a>
-                            <a href="/logbook/edit/<?= $logbook['id']; ?>" class="btn btn-danger">No</a>
+                            <a href="/logbook/index/<?= $logbook['id']; ?>" class="btn btn-success">Yes</a>
+                            <a href="/logbook/index/<?= $logbook['id']; ?>" class="btn btn-danger">No</a>
                             <br><br>
                             <a href="/logbook/index">back</a>
 
