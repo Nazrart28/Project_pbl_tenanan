@@ -22,6 +22,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
     <link rel="stylesheet" href="plugins/fontawesome-free/css/all.min.css">
     <!-- Theme style -->
     <link rel="stylesheet" href="dist/css/adminlte.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
 </head>
 
 <body class="hold-transition sidebar-mini">
@@ -63,10 +64,6 @@ scratch. This page gets rid of all links and provides the needed markup only.
 
                 <!-- Notifications Dropdown Menu -->
                 <li class="nav-item dropdown">
-                    <a class="nav-link" data-toggle="dropdown" href="#">
-                        <i class="far fa-bell"></i>
-                        <span class="badge badge-warning navbar-badge">15</span>
-                    </a>
                     <div class="dropdown-menu dropdown-menu-lg dropdown-menu-right">
                         <span class="dropdown-header">15 Notifications</span>
                         <div class="dropdown-divider"></div>
@@ -88,11 +85,6 @@ scratch. This page gets rid of all links and provides the needed markup only.
                         <a href="#" class="dropdown-item dropdown-footer">See All Notifications</a>
                     </div>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" data-widget="fullscreen" href="#" role="button">
-                        <i class="fas fa-expand-arrows-alt"></i>
-                    </a>
-                </li>
             </ul>
         </nav>
         <!-- /.navbar -->
@@ -100,7 +92,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
         <!-- Main Sidebar Container -->
         <aside class="main-sidebar sidebar-dark-primary elevation-4">
             <!-- Brand Logo -->
-            <a href="index3.html" class="brand-link">
+            <a class="text-decoration-none brand-link">
                 <span class="brand-text font-weight-light">
                     <h3>Sistem PBL D3 TI</h3>
                 </span>
@@ -115,13 +107,13 @@ scratch. This page gets rid of all links and provides the needed markup only.
                     </div>
                     <div class="info">
                         <?php if (has_permission('dosen')) : ?>
-                            <a href="#" class="d-block">Dosen</a>
+                            <a class="d-block text-decoration-none">Dosen</a>
                         <?php elseif (has_permission('mahasiswa')) : ?>
-                            <a href="#" class="d-block">Mahasiswa</a>
+                            <a class="d-block text-decoration-none">Mahasiswa</a>
                         <?php elseif (has_permission('mitra')) : ?>
-                            <a href="#" class="d-block">Mitra</a>
+                            <a class="d-block text-decoration-none">Mitra</a>
                         <?php else : ?>
-                            <a href="#" class="d-block"> </a>
+                            <a class="d-block text-decoration-none">GUEST</a>
                         <?php endif; ?>
                     </div>
                 </div>
@@ -154,7 +146,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="/kelompok/index">
-                                    <i class="nav-icon fas fa-users"></i>
+                                    <i class="nav-icon fas fa-graduation-cap"></i>
                                     <p>
                                         Kelompok Mahasiswa
                                     </p>
@@ -229,17 +221,9 @@ scratch. This page gets rid of all links and provides the needed markup only.
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="/kelompok/index">
-                                    <i class="nav-icon fas fa-users"></i>
+                                    <i class="nav-icon fas fa-graduation-cap"></i>
                                     <p>
                                         Kelompok Mahasiswa
-                                    </p>
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="/ganttchart/ganttchart">
-                                    <i class="nav-icon fas fa-book"></i>
-                                    <p>
-                                        Ganttchart
                                     </p>
                                 </a>
                             </li>
@@ -261,14 +245,27 @@ scratch. This page gets rid of all links and provides the needed markup only.
                                 </a>
                             </li>
                         <?php endif; ?>
+                        <li class="border-top my-3"></li>
                         <li class="nav-item">
                             <?php if (logged_in()) : ?>
-                                <a class="btn btn-outline-danger" href="/logout">Logout</a>
-                            <?php else : ?>
-                                <a class="btn btn-outline-primary" href="/login">Login</a>
-                            <?php endif; ?>
-
+                                <a class="nav-link" href="/logout">
+                                    <i class="nav-icon fas fa-arrow-left"></i>
+                                    <p>
+                                        Logout
+                                    </p>
+                                </a>
                         </li>
+                    <?php else : ?>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/login">
+                                <i class="nav-icon fas fa-arrow-right"></i>
+                                <p>
+                                    Login
+                                </p>
+                            </a>
+                        </li>
+
+                    <?php endif; ?>
                     </ul>
                 </nav>
             </div>
@@ -288,10 +285,6 @@ scratch. This page gets rid of all links and provides the needed markup only.
                             <h1 class="m-0"><?= (isset($pageTitle)) ? $pageTitle : ''; ?></h1>
                         </div><!-- /.col -->
                         <div class="col-sm-6">
-                            <ol class="breadcrumb float-sm-right">
-                                <li class="breadcrumb-item"><a href="<?= route_to('user.home'); ?>">Home</a></li>
-                                <li class="breadcrumb-item active"><?= (isset($pageTitle)) ? $pageTitle : 'Aplikasi PBL'; ?></li>
-                            </ol>
                         </div><!-- /.col -->
                     </div><!-- /.row -->
                 </div><!-- /.container-fluid -->

@@ -3,6 +3,7 @@
 namespace Config;
 
 use App\Controllers\Mitra;
+use Myth\Auth\Config\Auth;
 
 // Create a new instance of our RouteCollection class.
 $routes = Services::routes();
@@ -55,6 +56,7 @@ $routes->group("user", function ($routes) {
     $routes->get('ganttchart', 'UserController::ganttchart', ['as' => 'user.ganttchart']);
     $routes->get('submit_file', 'UserController::submit_file', ['as' => 'user.submit_file']);
 });
+
 $routes->get('/mitra/index', 'Mitra::index');
 $routes->get('/mitra/create', 'Mitra::create');
 $routes->get('/mitra/create', 'Mitra::save');
