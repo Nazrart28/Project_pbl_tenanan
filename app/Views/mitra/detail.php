@@ -28,7 +28,7 @@
                             </form>
 
                             <br><br>
-                            <a href="/mitra/index">back</a>
+                            <a href="/mitra/index/" class="btn btn-success">Back</a>
 
                         </div>
                     </div>

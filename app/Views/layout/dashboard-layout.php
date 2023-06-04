@@ -184,6 +184,14 @@ scratch. This page gets rid of all links and provides the needed markup only.
                                     </p>
                                 </a>
                             </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="/PenilaianController/index">
+                                    <i class="nav-icon fas fa-book-open"></i>
+                                    <p>
+                                        Penilaian
+                                    </p>
+                                </a>
+                            </li>
                         <?php elseif (has_permission('mahasiswa')) : ?>
                             <li class="nav-item">
                                 <a class="nav-link" href="/main/index">

@@ -9,35 +9,37 @@
                     <?= session()->getFlashdata('pesan'); ?>
                 </div>
             <?php endif; ?>
-            <h1 class="mt-2">Pembagian kelompok</h1>
-            <a href="/kelompok/create" class="btn btn-primary mb-3">Tambah Data</a>
-            <table class="table">
-                <thead>
-                    <tr>
-                        <th scope="col">No</th>
-                        <th scope="col">Nama</th>
-                        <th scope="col">NIM</th>
-                        <th scope="col">Kelas</th>
-                        <th scope="col">Kelompok</th>
-
-                    </tr>
-                </thead>
-                <tbody>
-                    <?php $i = 1; ?>
-                    <?php foreach ($kelompok as $m) : ?>
+            <div class="card border-info mb-3" style="border-top-width: 4px;">
+                <h1 class="mt-3">Pembagian kelompok</h1>
+                <a href="/kelompok/create" class="btn btn-primary mb-3" style="width: 10rem;">Tambah Data</a>
+                <table class="table">
+                    <thead>
                         <tr>
-                            <th scope="id"><?= $i++; ?>
-                            <td><?= $m['nama']; ?></td>
-                            <td><?= $m['nim']; ?></td>
-                            <td><?= $m['kelas']; ?></td>
-                            <td><?= $m['kelompok']; ?></td>
-                            <td>
-                                <a href="/kelompok/<?= $m['id']; ?>" class="btn btn-success">Detail</a>
-                            </td>
+                            <th scope="col">No</th>
+                            <th scope="col">Nama</th>
+                            <th scope="col">NIM</th>
+                            <th scope="col">Kelas</th>
+                            <th scope="col">Kelompok</th>
+
                         </tr>
-                    <?php endforeach; ?>
-                </tbody>
-            </table>
+                    </thead>
+                    <tbody>
+                        <?php $i = 1; ?>
+                        <?php foreach ($kelompok as $m) : ?>
+                            <tr>
+                                <th scope="id"><?= $i++; ?>
+                                <td><?= $m['nama']; ?></td>
+                                <td><?= $m['nim']; ?></td>
+                                <td><?= $m['kelas']; ?></td>
+                                <td><?= $m['kelompok']; ?></td>
+                                <td>
+                                    <a href="/kelompok/<?= $m['id']; ?>" class="btn btn-success">Detail</a>
+                                </td>
+                            </tr>
+                        <?php endforeach; ?>
+                    </tbody>
+                </table>
+            </div>
         </div>
     </div>
 </div>

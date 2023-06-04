@@ -9,37 +9,30 @@
         </div>
         <div class="form__right">
             <div class="form__padding-right">
-                <form action="<?= url_to('login') ?>" method="post">
+                <?= view('Myth\Auth\Views\_message_block') ?>
+                <form action="<?= url_to('register') ?>" method="post">
                     <?= csrf_field() ?>
-                    <?php if ($config->validFields === ['email']) : ?>
-                        <div class="form__email">
-                            <label for="login"><?= lang('Auth.email') ?></label>
-                            <input type="email" class="form-control <?php if (session('errors.login')) : ?>is-invalid<?php endif ?>" name="login" placeholder="<?= lang('Auth.email') ?>">
-                            <div class="invalid-feedback">
-                                <?= session('errors.login') ?>
-                            </div>
-                        </div>
-                    <?php else : ?>
-                        <div class="form__email">
-                            <label for="login"><?= lang('Auth.emailOrUsername') ?></label>
-                            <input type="text" class="form-control <?php if (session('errors.login')) : ?>is-invalid<?php endif ?>" name="login" placeholder="<?= lang('Auth.emailOrUsername') ?>">
-                            <div class="invalid-feedback">
-                                <?= session('errors.login') ?>
-                            </div>
-                        </div>
-                    <?php endif; ?>
-                    <div class="form__password">
+                    <div class="form__email">
+                        <label for="email"><?= lang('Auth.email') ?></label>
+                        <input type="email" class="form-control <?php if (session('errors.email')) : ?>is-invalid<?php endif ?>" name="email" aria-describedby="emailHelp" placeholder="<?= lang('Auth.email') ?>" value="<?= old('email') ?>" name="email" aria-describedby="emailHelp" placeholder="<?= lang('Auth.email') ?>" value="<?= old('email') ?>">
+                    </div>
+                    <div class="form__email">
+                        <label for="username"><?= lang('Auth.username') ?></label>
+                        <input type="text" class="form-control <?php if (session('errors.username')) : ?>is-invalid<?php endif ?>" name="username" placeholder="<?= lang('Auth.username') ?>" value="<?= old('username') ?>">
+                    </div>
+                    <div class="form__email">
                         <label for="password"><?= lang('Auth.password') ?></label>
-                        <input type="password" name="password" class="form-control  <?php if (session('errors.password')) : ?>is-invalid<?php endif ?>" placeholder="<?= lang('Auth.password') ?>">
-                        <div class="invalid-feedback">
-                            <?= session('errors.password') ?>
-                        </div>
+                        <input type="password" name="password" class="form-control <?php if (session('errors.password')) : ?>is-invalid<?php endif ?>" placeholder="<?= lang('Auth.password') ?>" autocomplete="off">
+                    </div>
+                    <div class=" form__email">
+                        <label for="repeat password"><?= lang('Auth.repeatPassword') ?></label>
+                        <input type="password" name="pass_confirm" class="form-control <?php if (session('errors.pass_confirm')) : ?>is-invalid<?php endif ?>" placeholder="<?= lang('Auth.repeatPassword') ?>" autocomplete="off">
                     </div>
                     <!-- <button type="submit" class="form__submit-btn btn button-primary"></button> -->
                     <!-- <input class="form__email" type="text" placeholder="Email" /> -->
                     <!-- <input class="form__password" type="text" placeholder="******" /> -->
-                    <input class="form__button-btn" type="submit" <?= lang('Auth.loginAction') ?> />
-                    <p><a class="small" href="<?= route_to('register') ?>">Create your account</a></p>
+                    <input class="form__button-btn" type="submit" <?= lang('Auth.registerAction') ?> />
+                    <p><a class="small" href="<?= route_to('login') ?>">have an account?Login</a></p>
             </div>
         </div>
     </div>
@@ -50,7 +43,7 @@
     * {
         margin: 0;
         padding: 0;
-        box-sizing: border-box;
+        box-sizing: flex;
         font-family: "Ubuntu", sans-serif;
         text-decoration: none;
     }
@@ -70,7 +63,7 @@
         justify-content: space-around;
         align-items: center;
         background: #fff;
-        border-radius: 40px;
+        border-radius: 50px;
     }
 
     .form__left {
@@ -78,8 +71,8 @@
     }
 
     .form__padding {
-        width: 210px;
-        height: 210px;
+        width: flex;
+        height: flex;
         background: #f2f2f2;
         border-radius: 50%;
         margin: 0 auto;
@@ -122,7 +115,7 @@
     }
 
     .form__email {
-        position: relative;
+        position: flex;
     }
 
     input {
