@@ -192,6 +192,14 @@ scratch. This page gets rid of all links and provides the needed markup only.
                                     </p>
                                 </a>
                             </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="/Monitoring/index">
+                                    <i class="nav-icon fas fa-book-open"></i>
+                                    <p>
+                                        monitoring
+                                    </p>
+                                </a>
+                            </li>
                         <?php elseif (has_permission('mahasiswa')) : ?>
                             <li class="nav-item">
                                 <a class="nav-link" href="/main/index">

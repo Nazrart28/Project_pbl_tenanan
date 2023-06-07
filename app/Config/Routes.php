@@ -49,6 +49,9 @@ $routes->get('/ganttchart/ganttchart', 'GanttChartController::ganttchart');
 $routes->get('/logbook/index', 'Logbook::index');
 $routes->get('/logbook/index', 'Logbook::index');
 $routes->get('/logbook/create', 'Logbook::create');
+$routes->get('/Monitoring/index', 'Monitoring::index');
+//$routes->get('logbook', 'Logbook::index');
+
 //$routes->patch('/logbook/detail', 'Logbook::detail');
 //$routes->get('/logbook/(:any)', 'Logbook::detail/$1');
 $routes->group("user", function ($routes) {
