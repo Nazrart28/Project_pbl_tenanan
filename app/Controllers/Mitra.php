@@ -100,10 +100,10 @@ class Mitra extends BaseController
     {
         //cek data
         $dataLama = $this->mitraModel->getMitra($this->request->getVar('id'));
-        if ($dataLama['mitra'] == $this->request->getVar('mitra')) {
+        if ($dataLama['id'] == $this->request->getVar('id')) {
             $rule_kelompok = 'required';
         } else {
-            $rule_kelompok = 'required|is_unique[mitra.kelompok]';
+            $rule_kelompok = 'required[mitra.kelompok]';
         }
 
         //validasi

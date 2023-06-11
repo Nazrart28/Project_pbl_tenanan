@@ -25,15 +25,15 @@
                     </thead>
                     <tbody>
                         <?php $i = 1; ?>
-                        <?php foreach ($kelompok as $m) : ?>
+                        <?php foreach ($kelompok as $k) : ?>
                             <tr>
                                 <th scope="id"><?= $i++; ?>
-                                <td><?= $m['nama']; ?></td>
-                                <td><?= $m['nim']; ?></td>
-                                <td><?= $m['kelas']; ?></td>
-                                <td><?= $m['kelompok']; ?></td>
+                                <td><?= $k['nama']; ?></td>
+                                <td><?= $k['nim']; ?></td>
+                                <td><?= $k['kelas']; ?></td>
+                                <td><?= $k['kelompok']; ?></td>
                                 <td>
-                                    <a href="/kelompok/<?= $m['id']; ?>" class="btn btn-success">Detail</a>
+                                    <a href="/kelompok/<?= $k['id']; ?>" class="btn btn-success">Detail</a>
                                 </td>
                             </tr>
                         <?php endforeach; ?>

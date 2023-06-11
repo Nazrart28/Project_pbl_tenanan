@@ -9,11 +9,14 @@ class SubmitFileController extends BaseController
     protected $SFModel;
     public function __construct()
     {
+        parent ::__construct();
         $this->SFModel = new SubmitFileModel();
+        $this->load->helper('form', 'url');
     }
 
     public function index()
     {
+
         $data = [
             'title' => 'SubmitFile',
             'SubmitFile' => $this->SFModel->getSubmitFile()
@@ -24,6 +27,10 @@ class SubmitFileController extends BaseController
 
     public function create()
     {
+        $config['upload_path'] = './file/';
+        $config['allowed_types'] = 'pdf|word';
+
+        $this->load->library('upload', $config);
         $data = [
             'title' => 'Submit File PBL'
         ];

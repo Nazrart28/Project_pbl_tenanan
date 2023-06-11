@@ -96,26 +96,22 @@ $routes->get('/kelompok/update/(:segment)', 'kelompok::update/$1');
 $routes->post('/kelompok/(:any)', 'kelompok::update/$1');
 $routes->get('/kelompok/(:any)', 'kelompok::detail/$1');
 $routes->get('/kelompok/(:any)', 'kelompok::detail/$1');
-$routes->post('/kelompok/edit/(:segment)', 'kelompok::edit/$1');
+// $routes->post('/kelompok/edit/(:segment)', 'kelompok::edit/$1');
 $routes->delete('/kelompok/(:num)', 'kelompok::delete/$1');
 
 
 $routes->get('/kelompok/index', 'kelompok::index');
 $routes->get('/kelompok/create', 'kelompok::create');
-$routes->get('/kelompok/edit/(:segment)', 'kelompok::edit/$1');
 $routes->delete('/kelompok/(:num)', 'kelompok::delete/$1');
 $routes->get('/kelompok/(:any)', 'kelompok::detail/$1');
-$routes->get('/kelompok/(:any)', 'kelompok::edit/$1');
 $routes->get('/kelompok/index', 'kelompok::index');
 $routes->get('/kelompok/create', 'kelompok::create');
-$routes->post('/kelompok/edit/(:segment)', 'kelompok::edit/$1');
 $routes->get('/kelompok/create', 'kelompok::save');
 //$routes->get('/kelompok/save/(:segment)', 'kelompok::save/$1');
 $routes->get('/kelompok/detail', 'kelompok::save');
 $routes->post('/kelompok/(:any)', 'kelompok::update/$1');
 $routes->get('/kelompok/(:any)', 'kelompok::detail/$1');
 $routes->get('/kelompok/(:any)', 'kelompok::detail/$1');
-$routes->post('/kelompok/edit/(:segment)', 'kelompok::edit/$1');
 $routes->delete('/kelompok/(:num)', 'kelompok::delete/$1');
 //$routes->post('/kelompok/save', 'kelompok::save');
 $routes->post('/kelompok/create', 'kelompok::create');

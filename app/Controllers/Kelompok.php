@@ -84,6 +84,7 @@ class Kelompok extends BaseController
             'title' => 'Form Ubah Data',
             'validation' => \Config\Services::validation(),
             'kelompok' => $this->kelompokModel->getkelompok($id)
+
         ];
         return view('kelompok/edit', $data);
     }

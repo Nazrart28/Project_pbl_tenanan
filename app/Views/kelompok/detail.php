@@ -18,7 +18,7 @@
                             <p class="card-text"><b>NIM :</b> <?= $kelompok['nim']; ?></p>
                             <p class="card-text"><b>Kelas :</b> <?= $kelompok['kelas']; ?></p>
                             <p class="card-text"><b>Kelompok :</b> <?= $kelompok['kelompok']; ?></p>
-
+                            
                             <a href="/kelompok/edit/<?= $kelompok['id']; ?>" class="btn btn-warning">Edit</a>
 
                             <form action="/kelompok/<?= $kelompok['id']; ?>" method="post" class="d-inline">

@@ -161,30 +161,6 @@ scratch. This page gets rid of all links and provides the needed markup only.
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="/logbook/index">
-                                    <i class="nav-icon fas fa-pen"></i>
-                                    <p>
-                                        Logbook
-                                    </p>
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="/ganttchart/ganttchart">
-                                    <i class="nav-icon fas fa-book"></i>
-                                    <p>
-                                        Ganttchart
-                                    </p>
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="/submit_file/index">
-                                    <i class="nav-icon fas fa-upload"></i>
-                                    <p>
-                                        Submit File
-                                    </p>
-                                </a>
-                            </li>
-                            <li class="nav-item">
                                 <a class="nav-link" href="/PenilaianController/index">
                                     <i class="nav-icon fas fa-book-open"></i>
                                     <p>
@@ -210,6 +186,13 @@ scratch. This page gets rid of all links and provides the needed markup only.
                                 </a>
                             </li>
                             <li class="nav-item">
+                                <a class="nav-link" href="/submit_file/index">
+                                    <i class="nav-icon fas fa-upload"></i>
+                                    <p>
+                                        Submit File
+                                    </p>
+                                </a>
+                            </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="/logbook/index">
                                     <i class="nav-icon fas fa-pen"></i>
@@ -257,6 +240,79 @@ scratch. This page gets rid of all links and provides the needed markup only.
                                     <i class="nav-icon fas fa-home"></i>
                                     <p>
                                         Home
+                                    </p>
+                                </a>
+                            </li>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="/kelompok/index">
+                                    <i class="nav-icon fas fa-graduation-cap"></i>
+                                    <p>
+                                        Kelompok Mahasiswa
+                                    </p>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="/submit_file/index">
+                                    <i class="nav-icon fas fa-upload"></i>
+                                    <p>
+                                        Submit File
+                                    </p>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="/submit_file/index">
+                                    <i class="nav-icon fas fa-upload"></i>
+                                    <p>
+                                        Submit File
+                                    </p>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="/logbook/index">
+                                    <i class="nav-icon fas fa-pen"></i>
+                                    <p>
+                                        Logbook
+                                    </p>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="/ganttchart/ganttchart">
+                                    <i class="nav-icon fas fa-book"></i>
+                                    <p>
+                                        Ganttchart
+                                    </p>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="/main/index">
+                                    <i class="nav-icon fas fa-home"></i>
+                                    <p>
+                                        Home
+                                    </p>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="/kelompok/index">
+                                    <i class="nav-icon fas fa-graduation-cap"></i>
+                                    <p>
+                                        Kelompok Mahasiswa
+                                    </p>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="/mitra/index">
+                                    <i class="nav-icon fas fa-building"></i>
+                                    <p>
+                                        Mitra dan Proyek
+                                    </p>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="/PenilaianController/index">
+                                    <i class="nav-icon fas fa-book-open"></i>
+                                    <p>
+                                        Penilaian
                                     </p>
                                 </a>
                             </li>

@@ -21,7 +21,6 @@
                             <a href="/logbook/index/<?= $logbook['id']; ?>" class="btn btn-danger">No</a>
                             <br><br>
                             <a href="/logbook/index">back</a>
-
                         </div>
                     </div>
                 </div>
